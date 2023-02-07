@@ -32,15 +32,15 @@ defmodule QueensTest do
       assert Queens.can_attack?({1, 1}, {3, 3}, [{4, 4}])
     end
 
-    test "cannot attack if the other_pieces_positions on same row but in the middle" do
+    test "if the other_pieces_positions on same row but in the middle" do
       refute Queens.can_attack?({0, 1}, {0, 6}, [{0, 3}])
     end
 
-    test "cannot attack if the other_pieces_positions on same column but in the middle" do
+    test "if the other_pieces_positions on same column but in the middle" do
       refute Queens.can_attack?({1, 0}, {3, 0}, [{2, 0}])
     end
 
-    test "cannot attack if the other_pieces_positions on diagonal but in the middle" do
+    test "if the other_pieces_positions on diagonal but in the middle" do
       refute Queens.can_attack?({1, 1}, {3, 3}, [{2, 2}])
     end
   end
